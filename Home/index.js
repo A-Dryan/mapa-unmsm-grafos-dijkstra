@@ -16,7 +16,7 @@ let grafo = {};
 let senderosConectados;
 
 // Cargar el archivo GeoJSON de senderos y procesarlo
-fetch('senderos_limpios.json')
+fetch('Home/senderos_limpios.json')
     .then(response => response.json())
     .then(data => {
         senderosConectados = conectarSegmentos(data, 10);
