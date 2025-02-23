@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNMSM_RUTA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=visibility" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+</head>
+<body>
+    <header class="header">
+        <div class="menu">
+            <img src="../Pictures/Logo Fisi.png" class="logo-fisi" alt="">
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#contenido">Inicio 🏠</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="contenido" class="header-content container">
+            <h1>DiJKSTRA</h1>
+            <p>APLICADO EN LA UNMSM</p>
+        </div>
+    </header>
+    <main id="reserva" class="reserva">
+        <div class="reserva-content conteiner">
+            <div id="contenedor-del-mapa" id="map"></div>
+            <div class="buscador">
+                <div class="leaflet-control-search">
+                    <!-- Input para el punto de inicio -->
+                    <div class="search-container">
+                        <input type="text" id="search-start" class="search-input" placeholder="Buscar facultad de inicio...">
+                        <ul id="suggestions-start" class="suggestions-list"></ul>
+                    </div>
+                
+                    <!-- Input para el punto de destino -->
+                    <div class="search-container">
+                        <input type="text" id="search-end" class="search-input" placeholder="Buscar facultad de destino...">
+                        <ul id="suggestions-end" class="suggestions-list"></ul>
+                    </div>
+                
+                    <!-- Botón de búsqueda -->
+                    <button id="search-route" class="search-button">Buscar</button>
+                </div>
+                <div class="buttons_ruta">
+                    <button id="select-points" class="btn-fisi" style="cursor: pointer;">Seleccionar puntos</button>
+                    <button id="reset-locations" class="btn-fisi" style="cursor: pointer;">Reiniciar Ubicaciones</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-content conteiner">
+            <div class="link-1">
+                <img src="../Pictures/UNMSM_logo.svg" class="logo_sanmarcos" alt="">
+                <img src="../Pictures/Logo Fisi.png" class="logo_fisi" alt="">
+                <ul>
+                    <li><a href="#">🔴 Universidad Nacional Mayor de San Marcos</a></li>
+                    <li><a href="#">🔵 Facultad de Ingeniería de sistemas e Informática</a></li>
+                    <li><a href="#">🏬 Calle Germán Amézaga s/n - Lima</a></li>
+                </ul>  
+            </div>
+            <div class="link-2">
+                <ul>
+                    <li><a href="#">Teléfono: (01)9999 999</a></li>
+                    <li><a href="#">Teléfono: (01)9999 999</a></li>
+                </ul>  
+            </div>
+        </div>
+    </footer>
+
+    <!-- 🔹 Tus scripts (Deben ir después de las librerías externas) -->
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@turf/turf@6.5.0/turf.min.js"></script> 
+    <script src="conectarSegmentos.js"></script>
+    <script src="CalculoDistancia.js"></script>
+    <script src="index.js"></script> 
+    <script src="GeoJSON/facultad.js"></script> 
+    <script src="GeoJSON/universidad.js"></script> 
+    <script src="GeoJSON/Manejo.js"></script> 
+    <script src="GeoJSON/PuntosFacultad.js"></script> 
+    <script src="buscador_3.js"></script>
+    
+</body>
+</html>
